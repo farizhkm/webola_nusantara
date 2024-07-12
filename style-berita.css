@@ -276,6 +276,9 @@ h3 {
 .list {
   padding: 0;
 }
+.list li a {
+  color: white;
+}
 .list li {
   width: auto;
   text-align: center;

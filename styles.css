@@ -313,28 +313,6 @@ body {
     width: 100%;
   }
 }
-
-#aboutus {
-  text-align: center;
-  font-size: large;
-  color: #000000;
-}
-section p.ringkasan {
-  font-style: italic;
-  font-size: small;
-  color: #000000;
-}
-section .konten-isi p {
-  font-size: normal;
-  color: #000000;
-}
-* {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  color: white;
-}
 footer {
   background: #333;
   padding-top: 50px;
@@ -361,9 +339,11 @@ h3 {
 }
 .footer-content ul {
   text-align: center;
+  color: white;
 }
 .list {
   padding: 0;
+  color: white;
 }
 .list li {
   width: auto;
@@ -371,6 +351,9 @@ h3 {
   list-style-type: none;
   padding: 7px;
   position: relative;
+}
+.list li a {
+  color: white;
 }
 .list li::before {
   content: "";
@@ -385,6 +368,7 @@ h3 {
 }
 .list li:hover::before {
   width: 70px;
+  background-color: white;
 }
 .social-icons {
   text-align: center;

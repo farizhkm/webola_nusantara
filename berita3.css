@@ -331,3 +331,6 @@ a:hover {
   font-size: 16px;
   padding: 7px;
 }
+.list li a {
+  color: white;
+}

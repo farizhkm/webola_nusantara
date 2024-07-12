@@ -190,3 +190,6 @@ body {
     cursor: pointer;
   }
 }
+.list li a {
+  color: white;
+}
