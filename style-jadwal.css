@@ -97,7 +97,7 @@ body {
   outline: none;
   border-radius: 20px 0 0 20px;
   transition: border-color 0.3s;
-  widht: 20px;
+  width: 20px;
 }
 
 .search-input:focus {
@@ -262,6 +262,8 @@ footer {
   background: #333;
   padding-top: 50px;
   position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 .container {
   width: 1140px;

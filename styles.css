@@ -5,7 +5,7 @@ body {
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
-  margin-top: 0%;
+  margin-top: 0;
   padding-top: 40px;
   min-height: 100vh;
 }
@@ -94,8 +94,7 @@ body {
   outline: none;
   border-radius: 20px 0 0 20px;
   transition: border-color 0.3s;
-  widht: 20px;
-}
+  }
 
 .search-input:focus {
   border-color: rgb(189, 10, 10);
@@ -313,10 +312,52 @@ body {
     width: 100%;
   }
 }
+.klasemen {
+  padding: 20px;
+  text-align: center;
+}
+
+.klasemen h2 {
+  margin-bottom: 20px;
+}
+
+.klasemen table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.klasemen th,
+.klasemen td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.klasemen th {
+  background-color: #333;
+  color: white;
+}
+.anjay a {
+  display: inline-block;
+  padding: 10px 550px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.anjay a:hover {
+  background-color: rgb(189, 10, 10);
+  color: white;
+}
+
 footer {
   background: #333;
   padding-top: 50px;
   color: white;
+  width: 100%;
+  bottom: 0;
 }
 .container {
   width: 1140px;
@@ -368,7 +409,7 @@ h3 {
 }
 .list li:hover::before {
   width: 70px;
-  background-color: white;
+  background-color: #f18930;
 }
 .social-icons {
   text-align: center;
