@@ -93,7 +93,7 @@ body {
   outline: none;
   border-radius: 20px 0 0 20px;
   transition: border-color 0.3s;
-  widht: 20px;
+  width: 150px;
 }
 
 .search-input:focus {

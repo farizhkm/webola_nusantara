@@ -97,7 +97,7 @@ body {
   outline: none;
   border-radius: 20px 0 0 20px;
   transition: border-color 0.3s;
-  width: 20px;
+  width: 150px;
 }
 
 .search-input:focus {
@@ -261,7 +261,7 @@ main {
 footer {
   background: #333;
   padding-top: 50px;
-  position: absolute;
+  color: white;
   width: 100%;
   bottom: 0;
 }
@@ -286,9 +286,11 @@ h3 {
 }
 .footer-content ul {
   text-align: center;
+  color: white;
 }
 .list {
   padding: 0;
+  color: white;
 }
 .list li {
   width: auto;
@@ -296,6 +298,9 @@ h3 {
   list-style-type: none;
   padding: 7px;
   position: relative;
+}
+.list li a {
+  color: white;
 }
 .list li::before {
   content: "";
@@ -310,6 +315,7 @@ h3 {
 }
 .list li:hover::before {
   width: 70px;
+  background-color: #f18930;
 }
 .social-icons {
   text-align: center;

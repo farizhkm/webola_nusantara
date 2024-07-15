@@ -9,6 +9,10 @@ body {
   padding-top: 40px;
   min-height: 100vh;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
 @media (min-width: 768px) {
   body {
     font-size: 16px;
@@ -94,7 +98,7 @@ body {
   outline: none;
   border-radius: 20px 0 0 20px;
   transition: border-color 0.3s;
-  }
+}
 
 .search-input:focus {
   border-color: rgb(189, 10, 10);
@@ -346,10 +350,99 @@ body {
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
 }
-
+.judul h1 {
+  color: #000000;
+}
 .anjay a:hover {
   background-color: rgb(189, 10, 10);
   color: white;
+}
+.liga {
+  margin-bottom: 40px;
+}
+
+.liga h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.jadwal {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #000000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.jadwal th,
+.jadwal td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #000000;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+.jadwal th {
+  background-color: #333;
+}
+.jadwal td {
+  color: black;
+}
+
+.jadwal tr:hover {
+  background-color: rgb(189, 10, 10);
+}
+
+.jadwal tr:hover td {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+.p {
+  margin: 0;
+  padding-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: rgb(3, 3, 3);
+}
+.contain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.video {
+  flex: 1 1 calc(45% - 20px);
+  max-width: calc(45% - 20px);
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.video iframe {
+  width: 100%;
+  height: auto;
+  border: none;
+}
+
+@media (max-width: 992px) {
+  .video {
+    flex: 1 1 calc(90% - 20px);
+    max-width: calc(90% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .video {
+    flex: 1 1 calc(100% - 20px);
+    max-width: calc(100% - 20px);
+  }
 }
 
 footer {
