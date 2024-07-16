@@ -8,6 +8,7 @@ body {
   margin-top: 50px;
   padding-top: 40px;
   min-height: calc(100vh - 40px);
+  display: block;
 }
 @media (min-width: 768px) {
   body {
@@ -197,9 +198,13 @@ body {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 5px;
   margin: 20px;
+  flex: 1;
+  margin-right: 20px;
+  float: left;
+  width: calc(100% - 400px);
+
 }
 .contianer-berita h6{
   padding-left: 0%;
@@ -246,13 +251,98 @@ img {
 img:hover {
   transform: scale(1.05);
 }
-footer {
-  background: #333;
-  padding-top: 50px;
-  color: white;
+.video-container {
+  width: 250px; /* Lebar video */
+  float: right;
+  padding: 20px 10px 0px 30px;
 }
-.container {
-  width: 1140px;
+.video-container:hover{
+  box-shadow: 0 5px 10px #333;
+  border-radius: 20px;
+  transition: box-shadow 0.5s ease;
+}
+.video:hover{
+  box-shadow: 0 5px 10px #333;
+  border-radius: 20px;
+  transition: box-shadow 0.5s ease;
+}
+.video {
+  width: 100%; 
+  height: auto; 
+  border: none; 
+}
+.kotak {
+  width: 60px;
+  background-color: #fff;
+  padding: 20px 100px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  float: right;
+  display: contents;
+  
+}
+.kotak img {
+  width: 250px;
+  height: 250px;
+  padding: 20px 10px 0px 30px;
+  overflow: hidden;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.kotak:hover{
+  box-shadow: 0 5px 5px #333;
+  transition: box-shadow 0.5s ease;
+}
+.kota:focus{
+  box-shadow: 0 10px 20px #333;
+  transition: box-shadow 0.3s ease;
+}
+.kotak:hover {
+  box-shadow: 0 5px 10px #333;
+  border-radius: 20px;
+  transition: box-shadow 0.5s ease;
+}
+.kotak:focus {
+  box-shadow: 0 10px 20px #333;
+  transition: box-shadow 0.3s ease;
+}
+
+.kotak h2 {
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.kotak p {
+  line-height: 1.4;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.kotak a.baca-selengkapnya {
+  display: inline-block;
+  padding: 3px 0px;
+  padding-left: 10px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  width: 20%;
+  
+}
+.kotak a.baca-selengkapnya:hover {
+  color: rgb(189, 10, 10);
+}
+
+footer {
+  background: rgb(73, 64, 64);
+  display: table-caption;
+  color: white;
+  width: 100%;
+}
+.container1 {
+  width: 1340px;
   margin: auto;
   display: flex;
   justify-content: center;

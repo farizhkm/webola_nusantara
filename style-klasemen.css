@@ -222,7 +222,7 @@ td {
   width: 10%;
 }
 .anjay td {
-  background-color: yellow; /* Latar belakang kuning untuk baris header */
+  background-color: yellow; 
 }
 .degradasi td {
   background-color: red;
