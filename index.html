@@ -24,10 +24,9 @@
                   <li><a href="klasemen.html">Klasemen</a></li>
                   <li><a href="aboutus.html">About Us</a></li>
         
-                  <form class="search-form" action="#" method="GET">
-                    <input type="text" class="search-input" placeholder="Cari tim, pemain" />
-                    <button type="submit" class="search-button">Search</button>
-                </form>
+                  <form class="search-form" onsubmit="return false;">
+                    <input type="text" id="search-input" class="search-input" placeholder="Cari tim, pemain" onkeyup="searchNews()" />
+                  </form>
         </div>
     </header>
     <main>
@@ -56,7 +55,7 @@
           </div>
       </section>
       <hr>
-      <div class="wadah">
+      <div class="wadah" id="news-container">
         <div class="kotak-group">
           <div class="kotak">
             <img src="conten/berita-indonesia.jpg" alt="Gambar Berita 1" />
@@ -108,32 +107,41 @@
           </div>
         </div>
       </div>
-   <script>
-      let currentGroup = 0;
-      const groups = document.querySelectorAll('.wadah .kotak-group');
-      const totalGroups = groups.length;
-      
-      function showGroup(index) {
+      <script>
+     function searchNews() {
+  const input = document.getElementById('search-input').value.toLowerCase();
+  const newsContainer = document.getElementById('news-container');
+  const newsItems = newsContainer.getElementsByClassName('kotak');
+  const searchResultsContainer = document.getElementById('search-results');
 
-        groups.forEach(group => {
-          group.style.display = 'none';
-        });
-      
+  let searchResultsHTML = '';
 
-        groups[index].style.display = 'flex';
-      }
-      
-      function nextGroup() {
-        currentGroup = (currentGroup + 1) % totalGroups;
-        showGroup(currentGroup);
-      }
-      
+  for (let i = 0; i < newsItems.length; i++) {
+    const title = newsItems[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
+    const description = newsItems[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+    if (title.includes(input) || description.includes(input)) {
+      newsItems[i].style.display = '';
+      searchResultsHTML += `
+        <div class="search-result">
+          <h2>${title}</h2>
+          <p>${description}</p>
+          <a href="${newsItems[i].querySelector('a').getAttribute('href')}" class="baca-selengkapnya" target="_blank">Baca Selengkapnya</a>
+        </div>
+      `;
+    } else {
+      newsItems[i].style.display = 'none';
+    }
+  }
 
-      showGroup(currentGroup);
-      
-      setInterval(nextGroup, 3000);
-    </script>
-<br>
+  if (searchResultsHTML === '') {
+    searchResultsContainer.innerHTML = '<p>Tidak ada hasil yang ditemukan.</p>';
+  } else {
+    searchResultsContainer.innerHTML = searchResultsHTML;
+  }
+}
+
+      </script>
+      <br>
       <br>
       <div class="klasemen">
         <div class="liga">
