@@ -22,6 +22,7 @@
                   <li><a href="berita.html">Berita</a></li>
                   <li><a href="jadwal.html">Jadwal</a></li>
                   <li><a href="klasemen.html">Klasemen</a></li>
+                  <li><a href="aboutus.html">About Us</a></li>
         
                   <form class="search-form" action="#" method="GET">
                     <input type="text" class="search-input" placeholder="Cari tim, pemain" />
@@ -45,7 +46,7 @@
                     <a href="https://www.facebook.com" target="_blank" class="sm-i">
                         <i class="fab fa-facebook-square">: Nusantara_Football_News</i>
                     </a>
-                    <a href="https://www.twitter.com" target="_blank" class="sm-i">
+                    <a href="https://x.com/NFotballnews?t=Bkf1J2vPPuwl0cMW4UByvw&s=09" target="_blank" class="sm-i">
                         <i class="fab fa-twitter-square">: NFn_</i>
                     </a>
                     <a href="https://www.instagram.com/web_nusantara/?next=%2F" target="_blank" class="sm-i">
@@ -56,38 +57,350 @@
       </section>
       <hr>
       <div class="wadah">
-        <div class="kotak">
-          <img src="conten/berita-indonesia.jpg" alt="Gambar Berita 1" />
-          <h2>Hasil laga persahabatan Timnas</h2>
-          <p>
-            Pertandingan Persahatan antara timnas Indonesia Melawan Tanzania
-            Berakhir dengan skor kaca mata...
-          </p>
-          <a href="berita.html" class="baca-selengkapnya" target="_blank">Baca Selengkapnya</a>
+        <div class="kotak-group">
+          <div class="kotak">
+            <img src="conten/berita-indonesia.jpg" alt="Gambar Berita 1" />
+            <h2>Hasil laga persahabatan Timnas</h2>
+            <p>
+              Pertandingan Persahatan antara timnas Indonesia Melawan Tanzania
+              Berakhir dengan skor kaca mata...
+            </p>
+            <a href="berita.html" class="baca-selengkapnya" target="_blank">Baca Selengkapnya</a>
+          </div>
+          <div class="kotak">
+            <img src="conten/latihan-berita-indo.jpeg" alt="Gambar Berita 2" />
+            <h2>Jadwal Lengkap Timnas Indonesia</h2>
+            <p>
+              Indonesia Berpeluang Lolos ke Piala Dunia Cek jadwal Pertandinganya...
+            </p>
+            <a href="berita-1.html" class="baca-selengkapnya">Baca Selengkapnya</a>
+          </div>
+          <div class="kotak">
+            <img src="conten/library-berita-persib.jpg" alt="Gambar Berita 3" />
+            <h2>Persib Bandung Juara Liga 1 Indonesia</h2>
+            <p>Persib Bandung Juara Liga 1 Indonesia Usai mengalahkan...</p>
+            <a href="berita-2.html" class="baca-selengkapnya">Baca Selengkapnya</a>
+          </div>
         </div>
-        <div class="kotak">
-          <img src="conten/latihan-berita-indo.jpeg" alt="Gambar Berita 2" />
-          <h2>Jadwal Lengkap Timnas Indonesia</h2>
-          <p>
-            Indonesia Berpeluang Lolos ke Piala Dunia Cek jadwal Pertandinganya...
-          </p>
-          <a href="berita-1.html" class="baca-selengkapnya">Baca Selengkapnya</a>
-        </div>
-        <div class="kotak">
-          <img src="conten/library-berita-persib.jpg" alt="Gambar Berita 3" />
-          <h2>Persib Bandung Juara Liga 1 Indonesia</h2>
-          <p>Persiba Bandung Juara Liga 1 Indonesia Usai mengalahkan...</p>
-          <a href="berita-2.html" class="baca-selengkapnya">Baca Selengkapnya</a>
+        <div class="kotak-group">
+          <div class="kotak">
+            <img src="conten/wasit fifa.jpg" alt="Gambar Berita 1" />
+            <h2>Hasil laga persahabatan Timnas</h2>
+            <p>
+              Pertandingan Persahatan antara timnas Indonesia Melawan Tanzania
+              Berakhir dengan skor kaca mata...
+            </p>
+            <a href="berita.html" class="baca-selengkapnya" target="_blank">Baca Selengkapnya</a>
+          </div>
+          <div class="kotak">
+            <img src="conten/berita4jpg.jpg" alt="Gambar Berita 2" />
+            <h2>Jadwal Lengkap Timnas Indonesia</h2>
+            <p>
+              Indonesia Berpeluang Lolos ke Piala Dunia Cek jadwal Pertandinganya...
+            </p>
+            <a href="berita-1.html" class="baca-selengkapnya">Baca Selengkapnya</a>
+          </div>
+          <div class="kotak">
+            <img src="conten/gambarAboutus.jpeg" alt="Gambar Berita 3" />
+            <h2>Persib Bandung Juara Liga 1 Indonesia</h2>
+            <p>Persib Bandung Juara Liga 1 Indonesia Usai mengalahkan...</p>
+            <a href="berita-2.html" class="baca-selengkapnya">Baca Selengkapnya</a>
+          </div>
         </div>
       </div>
+   <script>
+      let currentGroup = 0;
+      const groups = document.querySelectorAll('.wadah .kotak-group');
+      const totalGroups = groups.length;
+      
+      function showGroup(index) {
+
+        groups.forEach(group => {
+          group.style.display = 'none';
+        });
+      
+
+        groups[index].style.display = 'flex';
+      }
+      
+      function nextGroup() {
+        currentGroup = (currentGroup + 1) % totalGroups;
+        showGroup(currentGroup);
+      }
+      
+
+      showGroup(currentGroup);
+      
+      setInterval(nextGroup, 3000);
+    </script>
+<br>
+      <br>
+      <div class="klasemen">
+        <div class="liga">
+          <h2>Klasemen Sementara</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Pos</th>
+            <th>Tim</th>
+            <th>Main</th>
+            <th>Menang</th>
+            <th>Seri</th>
+            <th>Kalah</th>
+            <th>GM</th>
+            <th>GK</th>
+            <th>+/-</th>
+            <th>Poin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Persib Bandung</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>PSIS Semarang</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Persita Tangerang</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Bhayangkara FC</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Madura United</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Borneo FC</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Arema FC</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Persebaya Surabaya</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Persik Kediri</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Barito Putera</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>Persija Jakarta</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </div>
+      </div>
+    </table>
+    <div class="anjay"><a href="halaman-lain.html">Lihat Lebih Lengkap</a></div>
     </body>
-        <section id="aboutus">
-          <div class="layar-dalam">
-          </div>
-        </section>
-        <hr>
-      </main>
-</body>
+    <br>
+    <hr>
+    <main class="p">
+      <section class="liga">
+          <h2>Liga 1</h2>
+          <a href="jadwal.html" >
+          <table class="jadwal">
+              <thead>
+                  <tr>
+                      <th>Tanggal</th>
+                      <th>Tim</th>
+                      <th>Skor</th>
+                      <th>Tim</th>
+                      <th>Jam</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2024-07-10</td>
+                  <td>Persib Bandung</td>
+                  <td>-</td>
+                  <td>Persebaya Surabaya</td>
+                  <td>19:00 WIB</td>
+              </tr>
+              <tr>
+                  <td>2024-07-11</td>
+                  <td>PSIS Semarang</td>
+                  <td>-</td>
+                  <td>Arema FC</td>
+                  <td>16:00 WIB</td>
+              </tr>
+              <tr>
+                  <td>2024-07-12</td>
+                  <td>Persita Tangerang</td>
+                  <td>-</td>
+                  <td>Persikabo 1973</td>
+                  <td>18:30 WIB</td>
+              </tr>
+              <tr>
+                <td>2024-07-13</td>
+                <td>Bhayangkara FC</td>
+                <td>-</td>
+                <td>Persiraja Banda Aceh</td>
+                <td>15:30 WIB</td>
+            </tr>
+            <tr>
+                <td>2024-07-14</td>
+                <td>Madura United</td>
+                <td>-</td>
+                <td>Persik Kediri</td>
+                <td>17:00 WIB</td>
+            </tr>
+            <tr>
+                <td>2024-07-15</td>
+                <td>Borneo FC</td>
+                <td>-</td>
+                <td>Barito Putera</td>
+                <td>19:30 WIB</td>
+            </tr>
+            <tr>
+                <td>2024-07-16</td>
+                <td>Persib Bandung</td>
+                <td>-</td>
+                <td>Persija Jakarta</td>
+                <td>20:00 WIB</td>
+            </tr>
+            <tr>
+                <td>2024-07-17</td>
+                <td>PSIS Semarang</td>
+                <td>-</td>
+                <td>Persis Solo</td>
+                <td>15:30 WIB</td>
+            </tr>
+            <tr>
+                <td>2024-07-18</td>
+                <td>Persita Tangerang</td>
+                <td>-</td>
+                <td>Bali United</td>
+                <td>17:00 WIB</td>
+            </tr>
+              </tbody>
+          </table>
+          </a>
+      </section>
+      <br>
+      <h1 class="judul">Highlights | Championship Series BRI Liga 1 2023/24 </h1> 
+      <div class="contain">
+        <div class="video">
+            <iframe width="440" height="300" src="https://www.youtube.com/embed/lJ_FtUb-2Qc" title="Persib Bandung VS Madura United FC - Highlights | Championship Series BRI Liga 1 2023/24" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Persib Bandung VS Madura United FC - Highlights | Championship Series BRI Liga 1 2023/24</p></div>
+        <div class="video">
+            <iframe width="440" height="300" src="https://www.youtube.com/embed/lJ_FtUb-2Qc" title="Persib Bandung VS Madura United FC - Highlights | Championship Series BRI Liga 1 2023/24" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Persib Bandung VS Madura United FC - Highlights | Championship Series BRI Liga 1 2023/24</p></div>
+        <div class="video">
+            <iframe width="440" height="300" src="https://www.youtube.com/embed/UIZDlQyUEvU" title="Persija Jakarta VS Persis Solo - Highlights | BRI Liga 1 2023/24" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Persija Jakarta VS Persis Solo - Highlights | BRI Liga 1 2023/24</p></div>
+        <div class="video">
+            <iframe width="440" height="300" src="https://www.youtube.com/embed/GCqpQNgY8aM" title="PSIS Semarang VS Rans Nusantara FC - Highlights | BRI Liga 1 2023/24" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            PSIS Semarang VS Rans Nusantara FC - Highlights | BRI Liga 1 2023/24</div>
+        <div class="video">
+            <iframe width="440" height="300" src="https://www.youtube.com/embed/SE0jshSsnzw" title="Borneo FC Samarinda VS Bali United FC - Highlights | Championship Series BRI Liga 1 2023/24" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            Borneo FC Samarinda VS Bali United FC - Highlights | Championship Series BRI Liga 1 2023/24</div>       
+         <div class="video">
+        <iframe width="440" height="300" src="https://www.youtube.com/embed/JoknFg1rOsY" title="Madura United FC VS Borneo FC Samarinda - Highlights | Championship Series BRI Liga 1 2023/24" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        Madura United FC VS Borneo FC Samarinda - Highlights | Championship Series BRI Liga 1 2023/24 </div>
+
+    </div>
+<br>
+<hr>
+<div></div>
 <footer>
 <div class="container">
   <div class="footer-content">
@@ -103,7 +416,7 @@
       <li><a href="berita.html">Berita</a></li>
       <li><a href="jadwal.html">Jadwal</a></li>
       <li><a href="klasemen.html">Klasemen</a></li>
-      <li><a href="">About Us</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
     </ul>
   </div>
   <div class="footer-content">
@@ -128,4 +441,5 @@
   <p>&copy; 2024 your company . Di kasih Inpo maseh</p>
 </div>
 </footer>
+</main>
 </html>

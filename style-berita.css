@@ -8,6 +8,7 @@ body {
   margin-top: 50px;
   padding-top: 40px;
   min-height: calc(100vh - 40px);
+  display: block;
 }
 @media (min-width: 768px) {
   body {
@@ -93,7 +94,7 @@ body {
   outline: none;
   border-radius: 20px 0 0 20px;
   transition: border-color 0.3s;
-  widht: 20px;
+  width: 150px;
 }
 
 .search-input:focus {
@@ -197,9 +198,13 @@ body {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 5px;
   margin: 20px;
+  flex: 1;
+  margin-right: 20px;
+  float: left;
+  width: calc(100% - 400px);
+
 }
 .contianer-berita h6{
   padding-left: 0%;
@@ -246,13 +251,150 @@ img {
 img:hover {
   transform: scale(1.05);
 }
-footer {
-  background: #333;
-  padding-top: 50px;
-  color: white;
+.video-container {
+  width: 270px; 
+  float: right;
+  padding: 20px 10px 0px 30px;
+  overflow: hidden;
+  display: flex;
 }
-.container {
-  width: 1140px;
+.video-container:hover{
+  box-shadow: 0 5px 10px #333;
+  border-radius: 20px;
+  transition: box-shadow 0.5s ease;
+}
+.video:hover{
+  box-shadow: 0 5px 10px #333;
+  border-radius: 20px;
+  transition: box-shadow 0.5s ease;
+}
+.video {
+  width: 250px; 
+  height: 170px; 
+  border: none;
+
+}
+.kotak {
+  width: 60px;
+  background-color: #fff;
+  padding: 20px 100px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  float: right;
+  display: contents;
+  
+}
+.kotak img {
+  width: 250px;
+  height: 250px;
+  padding: 20px 10px 0px 30px;
+  overflow: hidden;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.kotak:hover{
+  box-shadow: 0 5px 5px #333;
+  transition: box-shadow 0.5s ease;
+}
+.kota:focus{
+  box-shadow: 0 10px 20px #333;
+  transition: box-shadow 0.3s ease;
+}
+.kotak:hover {
+  box-shadow: 0 5px 10px #333;
+  border-radius: 20px;
+  transition: box-shadow 0.5s ease;
+}
+.kotak:focus {
+  box-shadow: 0 10px 20px #333;
+  transition: box-shadow 0.3s ease;
+}
+
+.kotak h2 {
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.kotak p {
+  line-height: 1.4;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.kotak a.baca-selengkapnya {
+  display: inline-block;
+  padding: 3px 0px;
+  padding-left: 10px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  width: 22%;
+  
+}
+.kotak a.baca-selengkapnya:hover {
+  color: rgb(189, 10, 10);
+}
+.p {
+  margin: 0;
+  padding-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: rgb(3, 3, 3);
+}
+.contain {
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.video {
+  flex: 1 1 calc(45% - 20px);
+  max-width: calc(45% - 20px);
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.video iframe {
+  width: 100%;
+  height: auto;
+  border: none;
+}
+.v @media (max-width: 992px) {
+  .video {
+    flex: 1 1 calc(90% - 20px);
+    max-width: calc(90% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .video {
+    flex: 1 1 calc(100% - 20px);
+    max-width: calc(100% - 20px);
+  }
+}
+.judul{
+  width: 20%;
+  text-align: center;
+  padding-left: 40%;
+}
+footer {
+  background: rgb(73, 64, 64);
+  display: table-caption;
+  color: white;
+  width: 100%;
+}
+.container1 {
+  width: 1340px;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -275,6 +417,9 @@ h3 {
 }
 .list {
   padding: 0;
+}
+.list li a {
+  color: white;
 }
 .list li {
   width: auto;

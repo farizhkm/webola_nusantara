@@ -97,7 +97,7 @@ body {
   outline: none;
   border-radius: 20px 0 0 20px;
   transition: border-color 0.3s;
-  widht: 20px;
+  width: 150px;
 }
 
 .search-input:focus {
@@ -233,7 +233,6 @@ main {
   padding: 12px;
   text-align: center;
   border: 1px solid #000000;
-  text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 
 .jadwal th {
@@ -258,10 +257,67 @@ main {
   font-size: 16px;
   color: white;
 }
+a {
+  color: #000;
+  text-decoration: none;
+}
+.p {
+  margin: 0;
+  padding-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: rgb(3, 3, 3);
+
+}
+.judul{
+  width: 20%;
+  text-align: center;
+  padding-left: 40%;
+}
+.contain {
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.video {
+  flex: 1 1 calc(45% - 20px);
+  max-width: calc(45% - 20px);
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.video iframe {
+  width: 100%;
+  height: auto;
+  border: none;
+}
+.v @media (max-width: 992px) {
+  .video {
+    flex: 1 1 calc(90% - 20px);
+    max-width: calc(90% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .video {
+    flex: 1 1 calc(100% - 20px);
+    max-width: calc(100% - 20px);
+  }
+}
 footer {
   background: #333;
   padding-top: 50px;
-  position: absolute;
+  color: white;
+  width: 100%;
+  bottom: 0;
 }
 .container {
   width: 1140px;
@@ -284,9 +340,11 @@ h3 {
 }
 .footer-content ul {
   text-align: center;
+  color: white;
 }
 .list {
   padding: 0;
+  color: white;
 }
 .list li {
   width: auto;
@@ -294,6 +352,9 @@ h3 {
   list-style-type: none;
   padding: 7px;
   position: relative;
+}
+.list li a {
+  color: white;
 }
 .list li::before {
   content: "";
@@ -308,6 +369,7 @@ h3 {
 }
 .list li:hover::before {
   width: 70px;
+  background-color: #f18930;
 }
 .social-icons {
   text-align: center;
