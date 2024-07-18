@@ -57,31 +57,84 @@
       </section>
       <hr>
       <div class="wadah">
-        <div class="kotak">
-          <img src="conten/berita-indonesia.jpg" alt="Gambar Berita 1" />
-          <h2>Hasil laga persahabatan Timnas</h2>
-          <p>
-            Pertandingan Persahatan antara timnas Indonesia Melawan Tanzania
-            Berakhir dengan skor kaca mata...
-          </p>
-          <a href="berita.html" class="baca-selengkapnya" target="_blank">Baca Selengkapnya</a>
+        <div class="kotak-group">
+          <div class="kotak">
+            <img src="conten/berita-indonesia.jpg" alt="Gambar Berita 1" />
+            <h2>Hasil laga persahabatan Timnas</h2>
+            <p>
+              Pertandingan Persahatan antara timnas Indonesia Melawan Tanzania
+              Berakhir dengan skor kaca mata...
+            </p>
+            <a href="berita.html" class="baca-selengkapnya" target="_blank">Baca Selengkapnya</a>
+          </div>
+          <div class="kotak">
+            <img src="conten/latihan-berita-indo.jpeg" alt="Gambar Berita 2" />
+            <h2>Jadwal Lengkap Timnas Indonesia</h2>
+            <p>
+              Indonesia Berpeluang Lolos ke Piala Dunia Cek jadwal Pertandinganya...
+            </p>
+            <a href="berita-1.html" class="baca-selengkapnya">Baca Selengkapnya</a>
+          </div>
+          <div class="kotak">
+            <img src="conten/library-berita-persib.jpg" alt="Gambar Berita 3" />
+            <h2>Persib Bandung Juara Liga 1 Indonesia</h2>
+            <p>Persib Bandung Juara Liga 1 Indonesia Usai mengalahkan...</p>
+            <a href="berita-2.html" class="baca-selengkapnya">Baca Selengkapnya</a>
+          </div>
         </div>
-        <div class="kotak">
-          <img src="conten/latihan-berita-indo.jpeg" alt="Gambar Berita 2" />
-          <h2>Jadwal Lengkap Timnas Indonesia</h2>
-          <p>
-            Indonesia Berpeluang Lolos ke Piala Dunia Cek jadwal Pertandinganya...
-          </p>
-          <a href="berita-1.html" class="baca-selengkapnya">Baca Selengkapnya</a>
-        </div>
-        <div class="kotak">
-          <img src="conten/library-berita-persib.jpg" alt="Gambar Berita 3" />
-          <h2>Persib Bandung Juara Liga 1 Indonesia</h2>
-          <p>Persiba Bandung Juara Liga 1 Indonesia Usai mengalahkan...</p>
-          <a href="berita-2.html" class="baca-selengkapnya">Baca Selengkapnya</a>
+        <div class="kotak-group">
+          <div class="kotak">
+            <img src="conten/wasit fifa.jpg" alt="Gambar Berita 1" />
+            <h2>Hasil laga persahabatan Timnas</h2>
+            <p>
+              Pertandingan Persahatan antara timnas Indonesia Melawan Tanzania
+              Berakhir dengan skor kaca mata...
+            </p>
+            <a href="berita.html" class="baca-selengkapnya" target="_blank">Baca Selengkapnya</a>
+          </div>
+          <div class="kotak">
+            <img src="conten/berita4jpg.jpg" alt="Gambar Berita 2" />
+            <h2>Jadwal Lengkap Timnas Indonesia</h2>
+            <p>
+              Indonesia Berpeluang Lolos ke Piala Dunia Cek jadwal Pertandinganya...
+            </p>
+            <a href="berita-1.html" class="baca-selengkapnya">Baca Selengkapnya</a>
+          </div>
+          <div class="kotak">
+            <img src="conten/gambarAboutus.jpeg" alt="Gambar Berita 3" />
+            <h2>Persib Bandung Juara Liga 1 Indonesia</h2>
+            <p>Persib Bandung Juara Liga 1 Indonesia Usai mengalahkan...</p>
+            <a href="berita-2.html" class="baca-selengkapnya">Baca Selengkapnya</a>
+          </div>
         </div>
       </div>
-      <hr>
+   <script>
+      let currentGroup = 0;
+      const groups = document.querySelectorAll('.wadah .kotak-group');
+      const totalGroups = groups.length;
+      
+      function showGroup(index) {
+
+        groups.forEach(group => {
+          group.style.display = 'none';
+        });
+      
+
+        groups[index].style.display = 'flex';
+      }
+      
+      function nextGroup() {
+        currentGroup = (currentGroup + 1) % totalGroups;
+        showGroup(currentGroup);
+      }
+      
+
+      showGroup(currentGroup);
+      
+      setInterval(nextGroup, 3000);
+    </script>
+<br>
+      <br>
       <div class="klasemen">
         <div class="liga">
           <h2>Klasemen Sementara</h2>

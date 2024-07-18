@@ -256,6 +256,7 @@ img:hover {
   float: right;
   padding: 20px 10px 0px 30px;
   overflow: hidden;
+  display: flex;
 }
 .video-container:hover{
   box-shadow: 0 5px 10px #333;
