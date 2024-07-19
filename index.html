@@ -23,10 +23,6 @@
                   <li><a href="jadwal.html">Jadwal</a></li>
                   <li><a href="klasemen.html">Klasemen</a></li>
                   <li><a href="aboutus.html">About Us</a></li>
-        
-                  <form class="search-form" onsubmit="return false;">
-                    <input type="text" id="search-input" class="search-input" placeholder="Cari tim, pemain" onkeyup="searchNews()" />
-                  </form>
         </div>
     </header>
     <main>
@@ -55,7 +51,13 @@
           </div>
       </section>
       <hr>
-      <div class="wadah" id="news-container">
+              
+      <form id="search-form" class="search-form" action="#" method="GET">
+        <input type="text" id="search-input" class="search-input" placeholder="berita" />
+        <button type="submit" class="search-button">Search</button>
+      </form>                 
+
+      <div class="wadah">
         <div class="kotak-group">
           <div class="kotak">
             <img src="conten/berita-indonesia.jpg" alt="Gambar Berita 1" />
@@ -84,18 +86,17 @@
         <div class="kotak-group">
           <div class="kotak">
             <img src="conten/wasit fifa.jpg" alt="Gambar Berita 1" />
-            <h2>Hasil laga persahabatan Timnas</h2>
+            <h2>Liga 1 2024/2025 akan memakai teknologi VAR</h2>
             <p>
-              Pertandingan Persahatan antara timnas Indonesia Melawan Tanzania
-              Berakhir dengan skor kaca mata...
+                PSSI terus memberikan pembekalan kepada para wasit yang ada di Tanah Air. Pasalnya,...
             </p>
-            <a href="berita.html" class="baca-selengkapnya" target="_blank">Baca Selengkapnya</a>
+            <a href="berita.4.html" class="baca-selengkapnya" target="_blank">Baca Selengkapnya</a>
           </div>
           <div class="kotak">
             <img src="conten/berita4jpg.jpg" alt="Gambar Berita 2" />
-            <h2>Jadwal Lengkap Timnas Indonesia</h2>
+            <h2>Piala Presiden akan digelar dalam waktu dekat</h2>
             <p>
-              Indonesia Berpeluang Lolos ke Piala Dunia Cek jadwal Pertandinganya...
+                Sambangi Jokowi di Istana, Ketum PSSI Erick Thohir Bahas Persiapan Piala Presiden 2024...
             </p>
             <a href="berita-1.html" class="baca-selengkapnya">Baca Selengkapnya</a>
           </div>
@@ -107,46 +108,37 @@
           </div>
         </div>
       </div>
-      <script>
-     function searchNews() {
-  const input = document.getElementById('search-input').value.toLowerCase();
-  const newsContainer = document.getElementById('news-container');
-  const newsItems = newsContainer.getElementsByClassName('kotak');
-  const searchResultsContainer = document.getElementById('search-results');
+   <script>
+      let currentGroup = 0;
+      const groups = document.querySelectorAll('.wadah .kotak-group');
+      const totalGroups = groups.length;
+      
+      function showGroup(index) {
 
-  let searchResultsHTML = '';
+        groups.forEach(group => {
+          group.style.display = 'none';
+        });
+      
 
-  for (let i = 0; i < newsItems.length; i++) {
-    const title = newsItems[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
-    const description = newsItems[i].getElementsByTagName('p')[0].innerText.toLowerCase();
-    if (title.includes(input) || description.includes(input)) {
-      newsItems[i].style.display = '';
-      searchResultsHTML += `
-        <div class="search-result">
-          <h2>${title}</h2>
-          <p>${description}</p>
-          <a href="${newsItems[i].querySelector('a').getAttribute('href')}" class="baca-selengkapnya" target="_blank">Baca Selengkapnya</a>
-        </div>
-      `;
-    } else {
-      newsItems[i].style.display = 'none';
-    }
-  }
+        groups[index].style.display = 'flex';
+      }
+      
+      function nextGroup() {
+        currentGroup = (currentGroup + 1) % totalGroups;
+        showGroup(currentGroup);
+      }
+      
 
-  if (searchResultsHTML === '') {
-    searchResultsContainer.innerHTML = '<p>Tidak ada hasil yang ditemukan.</p>';
-  } else {
-    searchResultsContainer.innerHTML = searchResultsHTML;
-  }
-}
-
-      </script>
-      <br>
+      showGroup(currentGroup);
+      
+      setInterval(nextGroup, 3000);
+    </script>
+<br>
       <br>
       <div class="klasemen">
         <div class="liga">
           <h2>Klasemen Sementara</h2>
-      <table>
+          <table id="klasemen-table">
         <thead>
           <tr>
             <th>Pos</th>
@@ -161,7 +153,7 @@
             <th>Poin</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="klasemen-body">
           <tr>
             <td>1</td>
             <td>Persib Bandung</td>
@@ -174,6 +166,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
+          <tbody id="klasemen-body">
           <tr>
             <td>2</td>
             <td>PSIS Semarang</td>
@@ -186,6 +179,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
+          <tbody id="klasemen-body">
           <tr>
             <td>3</td>
             <td>Persita Tangerang</td>
@@ -198,6 +192,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
+          <tbody id="klasemen-body">
           <tr>
             <td>4</td>
             <td>Bhayangkara FC</td>
@@ -210,6 +205,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
+          <tbody id="klasemen-body">
           <tr>
             <td>5</td>
             <td>Madura United</td>
@@ -222,6 +218,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
+          <tbody id="klasemen-body">
           <tr>
             <td>6</td>
             <td>Borneo FC</td>
@@ -234,6 +231,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
+          <tbody id="klasemen-body">
           <tr>
             <td>7</td>
             <td>Arema FC</td>
@@ -246,6 +244,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
+          <tbody id="klasemen-body">
           <tr>
             <td>8</td>
             <td>Persebaya Surabaya</td>
@@ -258,6 +257,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
+          <tbody id="klasemen-body">
           <tr>
             <td>9</td>
             <td>Persik Kediri</td>
@@ -270,6 +270,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
+          <tbody id="klasemen-body">
           <tr>
             <td>10</td>
             <td>Barito Putera</td>
@@ -282,6 +283,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
+          <tbody id="klasemen-body">
           <tr>
             <td>11</td>
             <td>Persija Jakarta</td>
@@ -299,6 +301,23 @@
     </table>
     <div class="anjay"><a href="halaman-lain.html">Lihat Lebih Lengkap</a></div>
     </body>
+    <script>
+      document.getElementById('search-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Mencegah form submit default
+        let searchQuery = document.getElementById('search-input').value.toLowerCase();
+        let tableRows = document.querySelectorAll('#klasemen-body tr');
+        
+        tableRows.forEach(row => {
+          let teamName = row.cells[1].textContent.toLowerCase();
+          if (teamName.includes(searchQuery)) {
+            row.style.display = ''; // Tampilkan baris jika cocok
+          } else {
+            row.style.display = 'none'; // Sembunyikan baris jika tidak cocok
+          }
+        });
+      });
+    </script>
+    
     <br>
     <hr>
     <main class="p">
