@@ -3,355 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Footer</title>
-    <script
-      src="https://kit.fontawesome.com/1165876da6.js"
-      crossorigin="anonymous"
-    ></script>
+    <title>Bootstrap Modal</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
   </head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 16px;
-      color: white;
-    }
-    footer {
-      background: #343434;
-      padding-top: 50px;
-    }
-    .container {
-      width: 1140px;
-      margin: auto;
-      display: flex;
-      justify-content: center;
-    }
-    .footer-content {
-      width: 33.3%;
-    }
-    h3 {
-      font-size: 28px;
-      margin-bottom: 15px;
-      text-align: center;
-    }
-    .footer-content p {
-      width: 190px;
-      margin: auto;
-      padding: 7px;
-    }
-    .footer-content ul {
-      text-align: center;
-    }
-    .list {
-      padding: 0;
-    }
-    .list li {
-      width: auto;
-      text-align: center;
-      list-style-type: none;
-      padding: 7px;
-      position: relative;
-    }
-    .list li::before {
-      content: "";
-      position: absolute;
-      transform: translate(-50%, -50%);
-      left: 50%;
-      top: 100%;
-      width: 0;
-      height: 2px;
-      background: #f18930;
-      transition-duration: 0.5s;
-    }
-    .list li:hover::before {
-      width: 70px;
-    }
-    .social-icons {
-      text-align: center;
-      padding: 0;
-    }
-    .social-icons li {
-      display: inline-block;
-      text-align: center;
-      padding: 5px;
-    }
-    .social-icons i {
-      color: white;
-      font-size: 25px;
-    }
-    a {
-      text-decoration: none;
-    }
-    a:hover {
-      color: #f18930;
-    }
-    .social-icons i:hover {
-      color: #f18930;
-    }
-    .bottom-bar {
-      background: #f18930;
-      text-align: center;
-      padding: 10px 0;
-      margin-top: 50px;
-    }
-    .bottom-bar p {
-      color: #343434;
-      margin: 0;
-      font-size: 16px;
-      padding: 7px;
-    }
-  </style>
   <body>
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <h3>Contact Us</h3>
-          <p>Email:Info@example.com</p>
-          <p>Phone:+121 56556 565556</p>
-          <p>Address:Your Address 123 street</p>
-        </div>
-        <div class="footer-content">
-          <h3>Quick Links</h3>
-          <ul class="list">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Products</a></li>
-            <li><a href="">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-content">
-          <h3>Follow Us</h3>
-          <ul class="social-icons">
-            <li>
-              <a href=""><i class="fab fa-facebook"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="fab fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="fab fa-instagram"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="fab fa-linkedin"></i></a>
-            </li>
-          </ul>
+    <div class="container">
+      <!-- Tombol untuk membuka modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-toggle="modal"
+        data-target="#myModal"
+      >
+        Open Modal
+      </button>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Modal Heading</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">Modal body..</div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="bottom-bar">
-        <p>&copy; 2023 your company . All rights reserved</p>
-      </div>
-    </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
-header { text-align: center; margin-bottom: 70px; } h1 { font-size: 32px;
-font-weight: bold; color: #333; } .container { width: 25%; float: left; margin:
-30px 20px 0px 10px; padding: 20px; border: 1px solid #ddd; border-radius: 5px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); background-color: #fff; } .liga {
-border-collapse: collapse; width: 100%; box-sizing: border-box; } .liga th,
-.liga td { padding: 10px 15px; text-align: left; border: 1px solid #ddd;
-vertical-align: middle; } .liga th { background-color: #b81f1f; } .liga
-tr:nth-child(odd) { background-color: #7e7575; } .liga tr { background-color:
-#343434; } .liga tr.puncak td { background-color: #ffd700; font-weight: bold; }
-.liga tr.degradasi td { background-color: #ff6969; font-weight: bold; } .liga
-tr:hover { background-color: #cc0909; cursor: pointer; } .liga tr:active {
-background-color: #e0e0e0; } @media (max-width: 768px) { .container { width:
-100%; } .liga th, .liga td { padding: 8px 10px; } }
-<header>
-  <h1>Liga Indonesia: Persaingan Ketat di Puncak Klasemen!</h1>
-</header>
-
-<main>
-  <div class="container">
-    <div class="liga">
-      <h2>Klasemen Sementara</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Pos</th>
-            <th>Tim</th>
-            <th>Main</th>
-            <th>Menang</th>
-            <th>Seri</th>
-            <th>Kalah</th>
-            <th>GM</th>
-            <th>GK</th>
-            <th>+/-</th>
-            <th>Poin</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Persib Bandung</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>PSIS Semarang</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Persita Tangerang</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Bhayangkara FC</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Madura United</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>Borneo FC</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>Arema FC</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>Persebaya Surabaya</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td>Persik Kediri</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td>Barito Putera</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>11</td>
-            <td>Persija Jakarta</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>12</td>
-            <td>Persis Solo</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>13</td>
-            <td>Bali United</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>14</td>
-            <td>PSM Makassar</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</main>
