@@ -3,77 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nusantara Football News </title>
+    <title>Nusantara Football News</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-R65RT+LNXOeTF6p8FAPnJbJxWkk4Zxyi7z0QTjnkKq6mzFBndsk+JN8jIWb3+KbB" crossorigin="anonymous">
 </head>
   <body>
     <header>
-      <body>
-        <div class="navbar">
-           <div class="brand">
-              <div class="title">Nusantara Football News</div>
-              <div class="subtitle">Liga Indonesia</div>
-            </div>
-              <ul>
-
-                  <li><a href="index.html">Beranda</a></li>
-                  <li><a href="berita.html">Berita</a></li>
-                  <li><a href="jadwal.html">Jadwal</a></li>
-                  <li><a href="klasemen.html">Klasemen</a></li>
-                  <li><a href="aboutus.html">About Us</a></li>
+      <div class="navbar">
+        <div class="brand">
+          <div class="title">Nusantara Football News</div>
+          <div class="subtitle">Liga Indonesia</div>
         </div>
+        <ul>
+              <li><a href="berita-1.html">Berita</a></li>
+              <li><a href="jadwal.html">Jadwal</a></li>
+              <li><a href="klasemen.html">Klasemen</a></li>
+              <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+        <form class="search-form" onsubmit="return false;">
+          <input type="text" id="search-input" class="search-input" placeholder="Cari Berita" onkeyup="searchNews()" />
+        </form>
+      </div>
     </header>
     <main>
       <section id="beranda">
-          <div class="layar-utama">
-              <video autoplay muted loop>
-                  <source src="conten/wallpaper.mp4" type="video/mp4">
-                  Browser Anda tidak mendukung tag video.
-              </video>
-              <div class="overlay">
-                  <p>Selamat datang di Nusantara Football News Liga Indonesia!</p> 
-                  <br>
-                  <p>Dapatkan informasi terbaru tentang sepak bola Indonesia.</p>
-                  <br>
-                  <div class="sm">
-                    <a href="https://www.facebook.com" target="_blank" class="sm-i">
-                        <i class="fab fa-facebook-square">: Nusantara_Football_News</i>
-                    </a>
-                    <a href="https://x.com/NFotballnews?t=Bkf1J2vPPuwl0cMW4UByvw&s=09" target="_blank" class="sm-i">
-                        <i class="fab fa-twitter-square">: NFn_</i>
-                    </a>
-                    <a href="https://www.instagram.com/web_nusantara/?next=%2F" target="_blank" class="sm-i">
-                        <i class="fab fa-instagram-square">: Nusantara_Football_News</i>
-                    </a>
-              </div>
+        <div class="layar-utama">
+          <video autoplay muted loop>
+            <source src="conten/wallpaper.mp4" type="video/mp4">
+            Browser Anda tidak mendukung tag video.
+          </video>
+          <div class="overlay">
+            <p>Selamat datang di Nusantara Football News Liga Indonesia!</p>
+            <p>Dapatkan informasi terbaru tentang sepak bola Indonesia.</p>
+            <div class="sm">
+              <a href="https://www.facebook.com" target="_blank" class="sm-i">
+                <i class="fab fa-facebook-square">: Nusantara_Football_News</i>
+              </a>
+              <a href="https://x.com/NFotballnews?t=Bkf1J2vPPuwl0cMW4UByvw&s=09" target="_blank" class="sm-i">
+                <i class="fab fa-twitter-square">: NFn_</i>
+              </a>
+              <a href="https://www.instagram.com/web_nusantara/?next=%2F" target="_blank" class="sm-i">
+                <i class="fab fa-instagram-square">: Nusantara_Football_News</i>
+              </a>
+            </div>
           </div>
+        </div>
       </section>
       <hr>
-              
-      <form id="search-form" class="search-form" action="#" method="GET">
-        <input type="text" id="search-input" class="search-input" placeholder="berita" />
-        <button type="submit" class="search-button">Search</button>
-      </form>                 
-
-      <div class="wadah">
+      <div class="wadah" id="news-container">
         <div class="kotak-group">
           <div class="kotak">
             <img src="conten/berita-indonesia.jpg" alt="Gambar Berita 1" />
             <h2>Hasil laga persahabatan Timnas</h2>
-            <p>
-              Pertandingan Persahatan antara timnas Indonesia Melawan Tanzania
-              Berakhir dengan skor kaca mata...
-            </p>
+            <p>Pertandingan Persahabatan antara timnas Indonesia Melawan Tanzania berakhir dengan skor kaca mata...</p>
             <a href="berita.html" class="baca-selengkapnya" target="_blank">Baca Selengkapnya</a>
           </div>
           <div class="kotak">
             <img src="conten/latihan-berita-indo.jpeg" alt="Gambar Berita 2" />
             <h2>Jadwal Lengkap Timnas Indonesia</h2>
-            <p>
-              Indonesia Berpeluang Lolos ke Piala Dunia Cek jadwal Pertandinganya...
-            </p>
+            <p>Indonesia Berpeluang Lolos ke Piala Dunia. Cek jadwal Pertandingannya...</p>
             <a href="berita-1.html" class="baca-selengkapnya">Baca Selengkapnya</a>
           </div>
           <div class="kotak">
@@ -83,14 +72,14 @@
             <a href="berita-2.html" class="baca-selengkapnya">Baca Selengkapnya</a>
           </div>
         </div>
-        <div class="kotak-group">
+        <div class="kotak-group" data-category="berita">
           <div class="kotak">
             <img src="conten/wasit fifa.jpg" alt="Gambar Berita 1" />
             <h2>Liga 1 2024/2025 akan memakai teknologi VAR</h2>
             <p>
                 PSSI terus memberikan pembekalan kepada para wasit yang ada di Tanah Air. Pasalnya,...
             </p>
-            <a href="berita.4.html" class="baca-selengkapnya" target="_blank">Baca Selengkapnya</a>
+            <a href="berita.3.html" class="baca-selengkapnya" target="_blank">Baca Selengkapnya</a>
           </div>
           <div class="kotak">
             <img src="conten/berita4jpg.jpg" alt="Gambar Berita 2" />
@@ -98,47 +87,78 @@
             <p>
                 Sambangi Jokowi di Istana, Ketum PSSI Erick Thohir Bahas Persiapan Piala Presiden 2024...
             </p>
-            <a href="berita-1.html" class="baca-selengkapnya">Baca Selengkapnya</a>
+            <a href="berita.4.html" class="baca-selengkapnya">Baca Selengkapnya</a>
           </div>
           <div class="kotak">
-            <img src="conten/gambarAboutus.jpeg" alt="Gambar Berita 3" />
-            <h2>Persib Bandung Juara Liga 1 Indonesia</h2>
-            <p>Persib Bandung Juara Liga 1 Indonesia Usai mengalahkan...</p>
-            <a href="berita-2.html" class="baca-selengkapnya">Baca Selengkapnya</a>
+            <img src="conten/bursatransfer.jpg" alt="Gambar Berita 3" />
+            <h2>Teka-teki masa depan Hugo Gomes akhirnya terkuak.</h2>
+            <p>Pemain yang biasa dipanggil Jaja itu bergabung dengan Dewa United...</p>
+            <a href="berita.5.html" class="baca-selengkapnya">Baca Selengkapnya</a>
           </div>
         </div>
       </div>
-   <script>
-      let currentGroup = 0;
-      const groups = document.querySelectorAll('.wadah .kotak-group');
-      const totalGroups = groups.length;
-      
-      function showGroup(index) {
+        </div>
+      </div>
+      <script>
+        let currentGroup = 0;
+        const groups = document.querySelectorAll('.wadah .kotak-group');
+        const totalGroups = groups.length;
 
-        groups.forEach(group => {
-          group.style.display = 'none';
-        });
-      
+        function showGroup(index) {
+          groups.forEach(group => {
+            group.style.display = 'none';
+          });
+          groups[index].style.display = 'flex';
+        }
 
-        groups[index].style.display = 'flex';
-      }
-      
-      function nextGroup() {
-        currentGroup = (currentGroup + 1) % totalGroups;
+        function nextGroup() {
+          currentGroup = (currentGroup + 1) % totalGroups;
+          showGroup(currentGroup);
+        }
+
         showGroup(currentGroup);
-      }
-      
+        setInterval(nextGroup, 3000);
+      </script>
 
-      showGroup(currentGroup);
-      
-      setInterval(nextGroup, 3000);
-    </script>
+      <script>
+        function searchNews() {
+          const input = document.getElementById('search-input').value.toLowerCase();
+          const newsContainer = document.getElementById('news-container');
+          const newsItems = newsContainer.getElementsByClassName('kotak');
+          const searchResultsContainer = document.getElementById('search-results');
+
+          let searchResultsHTML = '';
+
+          for (let i = 0; i < newsItems.length; i++) {
+            const title = newsItems[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
+            const description = newsItems[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+            if (title.includes(input) || description.includes(input)) {
+              newsItems[i].style.display = '';
+              searchResultsHTML += `
+                <div class="search-result">
+                  <h2>${title}</h2>
+                  <p>${description}</p>
+                  <a href="${newsItems[i].querySelector('a').getAttribute('href')}" class="baca-selengkapnya" target="_blank">Baca Selengkapnya</a>
+                </div>
+              `;
+            } else {
+              newsItems[i].style.display = 'none';
+            }
+          }
+
+          if (searchResultsHTML === '') {
+            searchResultsContainer.innerHTML = '<p>Tidak ada hasil yang ditemukan.</p>';
+          } else {
+            searchResultsContainer.innerHTML = searchResultsHTML;
+          }
+        }
+      </script>
 <br>
       <br>
       <div class="klasemen">
         <div class="liga">
           <h2>Klasemen Sementara</h2>
-          <table id="klasemen-table">
+          <table>
         <thead>
           <tr>
             <th>Pos</th>
@@ -153,7 +173,7 @@
             <th>Poin</th>
           </tr>
         </thead>
-        <tbody id="klasemen-body">
+        <tbody >
           <tr>
             <td>1</td>
             <td>Persib Bandung</td>
@@ -166,7 +186,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
-          <tbody id="klasemen-body">
+          <tbody>
           <tr>
             <td>2</td>
             <td>PSIS Semarang</td>
@@ -179,7 +199,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
-          <tbody id="klasemen-body">
+          <tbody >
           <tr>
             <td>3</td>
             <td>Persita Tangerang</td>
@@ -192,7 +212,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
-          <tbody id="klasemen-body">
+          <tbody>
           <tr>
             <td>4</td>
             <td>Bhayangkara FC</td>
@@ -205,7 +225,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
-          <tbody id="klasemen-body">
+          <tbody>
           <tr>
             <td>5</td>
             <td>Madura United</td>
@@ -218,7 +238,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
-          <tbody id="klasemen-body">
+          <tbody>
           <tr>
             <td>6</td>
             <td>Borneo FC</td>
@@ -231,7 +251,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
-          <tbody id="klasemen-body">
+          <tbody >
           <tr>
             <td>7</td>
             <td>Arema FC</td>
@@ -244,7 +264,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
-          <tbody id="klasemen-body">
+          <tbody>
           <tr>
             <td>8</td>
             <td>Persebaya Surabaya</td>
@@ -257,7 +277,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
-          <tbody id="klasemen-body">
+          <tbody >
           <tr>
             <td>9</td>
             <td>Persik Kediri</td>
@@ -270,7 +290,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
-          <tbody id="klasemen-body">
+          <tbody>
           <tr>
             <td>10</td>
             <td>Barito Putera</td>
@@ -283,7 +303,7 @@
             <td>0</td>
             <td>0</td>
           </tr>
-          <tbody id="klasemen-body">
+          <tbody>
           <tr>
             <td>11</td>
             <td>Persija Jakarta</td>
@@ -301,23 +321,6 @@
     </table>
     <div class="anjay"><a href="halaman-lain.html">Lihat Lebih Lengkap</a></div>
     </body>
-    <script>
-      document.getElementById('search-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Mencegah form submit default
-        let searchQuery = document.getElementById('search-input').value.toLowerCase();
-        let tableRows = document.querySelectorAll('#klasemen-body tr');
-        
-        tableRows.forEach(row => {
-          let teamName = row.cells[1].textContent.toLowerCase();
-          if (teamName.includes(searchQuery)) {
-            row.style.display = ''; // Tampilkan baris jika cocok
-          } else {
-            row.style.display = 'none'; // Sembunyikan baris jika tidak cocok
-          }
-        });
-      });
-    </script>
-    
     <br>
     <hr>
     <main class="p">

@@ -245,6 +245,12 @@ tr:nth-child(even) {
 .current-row {
   background-color: #e0e0e0;
 }
+#no-results {
+  text-align: center;
+  font-size: 18px;
+  color: #d9534f;
+  margin: 20px 0;
+}
 .contain {
   display: -webkit-flex;
   flex-wrap: wrap;
@@ -283,6 +289,7 @@ tr:nth-child(even) {
     max-width: calc(100% - 20px);
   }
 }
+
 .judul {
   width: 20%;
   text-align: center;

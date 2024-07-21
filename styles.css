@@ -212,6 +212,8 @@ body {
 .search-form {
   display: flex;
   position: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .search-input {
