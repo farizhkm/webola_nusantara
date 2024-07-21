@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Search</title>
+    <link rel="stylesheet" href="cari tim.css">
+
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="brand">
+                <div class="title">Nusantara Football News</div>
+                <div class="subtitle">Liga Indonesia</div>
+            </div>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="berita.html">Berita</a></li>
+                <li><a href="jadwal.html">Jadwal</a></li>
+                <li><a href="aboutus.html">cari tim</a></li>
+                <li><a href="klasemen.html">Klasemen</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                
+            </ul>
+            <form class="search-form" action="#" method="GET">
+                <input type="text" id="searchInput" class="search-input" placeholder="Cari tim, pemain" onkeyup="searchPlayer()">
+                <button type="submit" class="search-button">Search</button>
+            </form>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content" id="timContainer">
+            <div class="tim-card" id="persib">
+                <img src="conten/bbbbb.png" alt="persib bandung" class="player-image">
+                <h2>Persib</h2>
+                <p>Soccer Team</p>
+                <button onclick="toggleDetails('persib')">Details</button>
+                <div class="details" id="details-persib">
+                    <h3>Persib Bandung</h3>
+                    <p>Persatuan Sepak Bola Indonesia Bandung (atau disingkat Persib) adalah klub sepak bola profesional Indonesia yang berbasis di Kota Bandung, Jawa Barat. Klub ini didirikan pada 5 Januari 1919 dengan nama Bandoeng Inlandsche Voetbal Bond (BIVB).[2] Saat ini Persib bermain di Liga 1 Indonesia, julukan terkenal klub ini Maung Bandung dan Pangeran Biru.
+                    Persib merupakan salah satu klub Perserikatan yang ikut serta 
+                    dalam membentuk federasi sepak bola Indonesia yaitu PSSI. Klub ini juga 
+                    termasuk dalam klub dengan keuangan paling stabil di Liga 1 Indonesia dan termasuk daftar klub terkaya di Asia Tenggara.[butuh rujukan] Klub ini juga adalah klub yang belum pernah ter-degradasi di sejarah persepak bolaan Indonesia.</p>
+                </div>
+            </div>
+            <div class="tim-card" id="persija">
+                <img src="conten/persija.png" alt="persija jakarta" class="player-image">
+                <h2>Persija</h2>
+                <p>Soccer Team</p>
+                <button onclick="toggleDetails('persija')">Details</button>
+                <div class="details" id="details-persija">
+                    <h3>Persija Jakarta</h3>
+                    <p>Persatuan Sepak Bola Indonesia Jakarta (atau biasa disebut sebagai Persija 
+                        Jakarta, atau hanya Persija saja)[a] adalah klub sepak bola profesional Indonesia yang 
+                        berbasis di Jakarta, Indonesia. Klub ini didirikan pada 28 November 1928 dengan nama Voetbalbond Boemipoetera. Klub ini terkenal dengan julukan Macan Kemayoran. Klub ini sekarang bermain di Liga 1 Indonesia.
+                        Persija Jakarta merupakan klub dengan jumlah gelar terbanyak di Indonesia dengan total 9 gelar juara era Perserikatan dan 2 gelar era Liga Indonesia Profesional. Persija (VIJ) juga klub 
+                        yang ikut serta dalam membentuk federasi sepak bola Indonesia PSSI pada tahun 1930. Persija juga merupakan klub yang belum pernah ter-degradasi di sejarah persepakbolaan Indonesia bersama dengan Persib Bandung dan PSM Makassar.</p>
+                </div>
+            </div>
+            <div class="tim-card" id="malut">
+                <img src="conten/malut.png" alt="malut" class="player-image">
+                <h2>Malut</h2>
+                <p>Soccer Team</p>
+                <button onclick="toggleDetails('malut')">Details</button>
+                <div class="details" id="details-malut">
+                    <h3>Maluku Utara</h3>
+                    <p>Maluku Utara United Football Club (biasa disebut sebagai Malut United FC, atau hanya Malut United saja)[a] adalah klub sepak bola Indonesia yang berbasis di Kota Ternate, Maluku Utara. Klub didirikan tahun 2023 dan bermarkas di Stadion Gelora Kie Raha. 
+                        Klub saat ini berkompetisi di Liga 1 yang merupakan kasta tertinggi sepak bola di liga Indonesia.</p>
+                </div>
+            </div>
+            <div class="tim-card" id="borneo">
+                <img src="conten/borneo.png" alt="borneo fc" class="player-image">
+                <h2>Borneo FC</h2>
+                <p>Soccer Team</p>
+                <button onclick="toggleDetails('borneo')">Details</button>
+                <div class="details" id="details-borneo">
+                    <h3>Borneo FC</h3>
+                    <p>Borneo Football Club Samarinda[1] (biasa disebut sebagai Borneo FC Samarinda, atau hanya Borneo FC saja) adalah klub sepak bola Indonesia yang berbasis di Kota Samarinda, Kalimantan Timur. Pada awal berdirinya klub ini bermain di Divisi Utama Liga Indonesia 2014 setelah mengakuisisi klub Perseba Super Bangkalan pada 19 Maret 2014, menggantikan Persisam Samarinda sebagai klub asal Samarinda yang berkompetisi di kasta teratas di Indonesia. Pada 2015, mereka berlaga di Indonesia Super League berstatus sebagai klub promosi setelah berhasil keluar sebagai juara 
+                        Divisi Utama Liga Indonesia 2014 setelah mengalahkan Persiwa Wamena di partai final.
+
+                        Menjalani dua laga pada ISL 2015, langkah PBFC akhirnya terhenti setelah 
+                        PSSI dan kompetisi dibekukan Menpora RI. Selepas itu, mereka terjun di Piala Presiden, sekaligus sukses menembus babak 8 besar. Selepas ikut di Piala Presiden, Pusamania Borneo FC juga ikut berpartisipasi di Indonesian Championship Torabika Piala Jenderal Sudirman 2015 dan mereka mampu menembus babak Semifinal. Pusamania Borneo FC juga pernah menjuarai turnamen Piala Gubernur Kaltim 2016, dan menjadi Runner up di Piala Presiden 2017. Pada musim 2017, Pusamania Borneo FC mengganti nama klubnya menjadi Borneo FC untuk mengarungi kompetisi Liga 1.</p>
+                </div>
+            </div>
+            <div class="tim-card" id="dewa">
+                <img src="conten/dewa.jpeg" alt="dewa united" class="player-image">
+                <h2>Dewa United</h2>
+                <p>Soccer Team</p>
+                <button onclick="toggleDetails('dewa')">Details</button>
+                <div class="details" id="details-dewa">
+                    <h3>Dewa United</h3>
+                    <p>Dewa United Football Club adalah klub sepak bola Indonesia yang berbasis di Kota Tangerang Selatan, Banten. Walaupun berbasis di Kota Tangerang Selatan, namun klub ini bermarkas di Indomilk Arena yang terletak di wilayah Kecamatan Kelapa Dua, Kabupaten Tangerang. Wikipedia
+                        Pelatih: Jan Olde Riekerink
+                        Arena/Stadion: Indomilk Arena Stadium
+                        Lokasi: Tangerang Selatan
+                        Didirikan: 2009
+                        Julukan: The Deity Warriors; Deluxe Unicorn; Tangsel Warrior
+                        Kelompok suporter: Anak Dewa
+                        Ketua Umum: Ardian Satya Negara.</p>
+                </div>
+            </div>
+            <div class="tim-card" id="psm">
+                <img src="conten/psm.png" alt="psm makasar" class="player-image">
+                <h2>PSM Makassar</h2>
+                <p>Soccer Team</p>
+                <button onclick="toggleDetails('psm')">Details</button>
+                <div class="details" id="details-psm">
+                    <h3>PSM Makassar</h3>
+                    <p>Persatuan Sepak bola Makassar adalah sebuah klub sepak bola profesional Indonesia yang berbasis di Kota Makassar, Sulawesi Selatan. PSM Makassar merupakan salah satu klub sepak bola tertua di Indonesia yang didirikan pada tahun 1915 dengan nama Macassarche Voetbalbond. Wikipedia
+                        Manajer: Bernardo Tavares
+                        Arena/Stadion: Stadion Gelora B. J. Habibie (GBH)
+                        Didirikan: 1915
+                        Pelatih: Bernardo Tavares
+                        Liga: Liga 1
+                        Lokasi: Makassar
+                        Berdiri: 02 November 1915, sebagai Macassarche Voetbalbond (MVB); 1942 sebagai PSM Makassar.</p>
+                </div>
+            </div>
+            <div class="tim-card" id="persebaya">
+                <img src="conten/persebaya.png" alt="persebaya" class="player-image">
+                <h2>Persebaya</h2>
+                <p>Soccer Team</p>
+                <button onclick="toggleDetails('persebaya')">Details</button>
+                <div class="details" id="details-persebaya">
+                    <h3>Persebaya Surabaya</h3>
+                    <p>Persatuan Sepak Bola Surabaya (disingkat Persebaya) adalah 
+                        sebuah klub sepak bola profesional Indonesia yang berbasis di Kota Surabaya, Jawa Timur. Saat ini Persebaya berkompetisi Liga 1 Indonesia. Persebaya berdiri pada 18 Juni 1927 sebagai Soerabajasche Indonesische Voetbal Bond (SIVB).
+
+                        Persebaya pernah mengubah namanya menjadi Persebaya 1927 akibat dari konflik Dualisme Persebaya Surabaya yang terjadi pada tahun 2010 hingga 2017 yang menyebabkan keanggotaan Persebaya di PSSI dibekukan.[3] Setelah persoalan dualisme Persebaya selesai, status keanggotaan Persebaya dipulihkan kembali 
+                        ketika kongres tahunan PSSI pada tanggal 8 Januari 2017 di Bandung.[4]</p>
+                </div>
+            </div>
+            <div class="tim-card" id="kediri">
+                <img src="conten/kediri.png" alt="persik kediri" class="player-image">
+                <h2>Persik Kediri</h2>
+                <p>Soccer Team</p>
+                <button onclick="toggleDetails('kediri')">Details</button>
+                <div class="details" id="details-kediri">
+                    <h3>Persik Kediri</h3>
+                    <p>Persatuan Sepak bola Indonesia Kediri (disingkat Persik Kediri) 
+                        merupakan klub sepak bola profesional Indonesia yang berbasis di Kota Kediri, Jawa Timur. Klub didirikan tahun 1950 dan bermarkas di Stadion Brawijaya, Kota Kediri dengan alternatif Stadion Gelora Daha Jayati, Kabupaten Kediri. Klub saat ini berkompetisi di Liga 1 yang merupakan kasta tertinggi sepak bola di liga Indonesia.
+
+                        Persik Kediri dipromosikan ke tingkat atas pada tahun 2002 dan mulai bermain di Divisi Utama Liga Indonesia 2003. Sejak liga Indonesia dimulai di tahun 1994, Persik telah memenangkan masing-masing edisi 2003 dan 2006[3] Persik Kediri identik dengan jersey kebesaran berwarna ungu. Tim dengan julukan Macan Putih serta memiliki semboyan kebanggaan yaitu Djajati atau Panjalu Jayati yang berarti Kadiri Menang, diambil dari prasasti Hantang. Mengisahkan kemenangan Kerajaan Kaḍiri[4] dengan rajanya yang terkenal saat itu Sri Jayabhaya atas Janggala, menjadi pemantik semangat dan sebuah
+                         harapan agar Persik selalu berjuang meraih kemenangan di setiap laga.</p>
+                </div>
+            </div>
+            <div class="tim-card" id="arema">
+                <img src="conten/arema.png" alt="arema fc" class="player-image">
+                <h2>Arema FC</h2>
+                <p>Soccer Team</p>
+                <button onclick="toggleDetails('arema')">Details</button>
+                <div class="details" id="details-arema">
+                    <h3>Arema FC</h3>
+                    <p>Arema Football Club (atau biasa disebut sebagai Arema FC, atau hanya Arema saja) adalah sebuah klub sepak bola profesional Indonesia yang berbasis di Kabupaten Malang, Jawa Timur. Klub ini 
+                        berkompetisi di Liga 1 yang merupakan kasta tertinggi sepak bola Indonesia. Klub ini juga dikenal dengan julukan Singo Edan (bahasa Jawa: Singa Gila).
+
+                        Arema didirikan pada tanggal 11 Agustus 1987 sebagai Arema Malang. Pada tahun 2009, Arema 
+                        berganti nama menjadi Arema Indonesia.[1] Tahun 2012, Arema Indonesia diakusisi oleh Grup Bakrie. Saat itu, Bakrie menjual klub mereka, Pelita Jaya dan berubah menjadi Pelita Bandung Raya sehingga membatalkan rencana merger antar kedua tim.[2][3] Pada tahun 2013, Arema Indonesia berganti nama menjadi Arema Cronus setelah diakuisisi oleh Grup Bakrie.[4] Pada tahun 2017, nama Arema Cronus berubah menjadi Arema FC hingga sekarang.[5]
+                        
+                        Selama berlaga di Liga 1, Arema bermarkas di Stadion Kanjuruhan, Kabupaten Malang 
+                        dan Stadion Gajayana, Kota Malang. Arema adalah tim sekota dari Arema Indonesia, Persema Malang, Persekam Metro, NZR Sumbersari, dan Malang United..</p>
+                </div>
+            </div>
+            <div class="tim-card" id="madura">
+                <img src="conten/madyra.jpeg" alt="madura united" class="player-image">
+                <h2>Madura United</h2>
+                <p>Soccer Team</p>
+                <button onclick="toggleDetails('madura')">Details</button>
+                <div class="details" id="details-madura">
+                    <h3>Madura United</h3>
+                    <p>Madura United Football Club (biasa disebut sebagai Madura United FC, atau hanya Madura United saja) adalah klub sepak bola 
+                        profesional asal Indonesia yang berbasis di Pulau Madura, 
+                        tepatnya di Kabupaten Pamekasan, Jawa Timur.
+
+                        Klub ini bermain di Liga 1 Indonesia.</p>
+                </div>
+            </div>
+            <div class="tim-card" id="solo">
+                <img src="conten/solo.png" alt="persis solo" class="player-image">
+                <h2>Persis Solo</h2>
+                <p>Soccer Team</p>
+                <button onclick="toggleDetails('solo')">Details</button>
+                <div class="details" id="details-solo">
+                    <h3>Persis Solo</h3>
+                    <p>Persatuan Sepak Bola Indonesia Surakarta (atau PERSIS), umumnya dikenal sebagai Persis Solo [a] adalah sebuah klub sepak bola profesional Indonesia yang berbasis di Kota Surakarta, Jawa Tengah. Klub ini awalnya menggunakan nama Vorstenlandsche Voetbal Bond (VVB), yang didirikan oleh Sastrosaksono, Raden Ngabehi Reksodiprojo dan Sutarman pada 8 November 1923. 
+                        Penggantian nama menjadi PERSIS ini terjadi karena adanya Sumpah Pemuda pada 28 Oktober 1928. Selain itu Persis Surakarta juga merupakan salah satu dari tujuh klub pendiri PSSI pada 19 April 1930.
+
+                        Persis kembali ke kasta atas dalam kancah sepak bola Indonesia pada tahun 2022 
+                        menyusul keberhasilannya memenangkan gelar Liga 2 2021. Kebangkitan Persis dimulai pada tahun 2021 dengan didorong oleh pemilik barunya yang merupakan putra daerah Surakarta dan putra bungsu dari Presiden Joko Widodo yaitu Kaesang Pangarep, serta kedua pemilik lainnya yakni Kevin Nugroho dan Menteri Badan Usaha Milik Negara Erick Thohir.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p>Email: Nfn2024@gmail.com</p>
+                <p>Phone: +62 89517277532</p>
+                <p>Alamat: Jl. AmposariFc No 99 Kec.Tembalang Jawa Tengah</p>
+            </div>
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                <ul class="list">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li><a href="jadwal.html">Jadwal</a></li>
+                    <li><a href="klasemen.html">Klasemen</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://x.com/NFotballnews?t=Bkf1J2vPPuwl0cMW4UByvw&s=09"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/web_nusantara/?next=%2F"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://x.com/NFotballnews?t=Bkf1J2vPPuwl0cMW4UByvw&s=09"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2024 your company. Di kasih Inpo maseh</p>
+        </div>
+    </footer>
+    <script src="cari tim.js"></script>
+</body>
+</html>
