@@ -197,10 +197,10 @@ main {
 
 .content {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns, each taking an equal fraction of the available space */
-  gap: 20px; /* Space between the grid items */
-  justify-content: center; /* Center the grid within the container */
-  padding: 20px; /* Add padding around the grid */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  justify-content: center;
+  padding: 20px; 
 }
 
 .tim-card {
@@ -216,11 +216,11 @@ main {
 }
 
 .tim-card img {
-  width: 100%; /* Ensure the image fills the width of the card */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 150px; /* Set a maximum height to avoid overly large images */
-  object-fit: contain; /* Ensure the entire image is visible */
-  border-radius: 10px; /* Optional: rounded corners */
+  width: 100%; 
+  height: auto; 
+  max-height: 150px; 
+  object-fit: contain; 
+  border-radius: 10px; 
 }
 
 }
@@ -251,7 +251,7 @@ main {
 }
 @media (max-width: 480px) {
   .content {
-    grid-template-columns: 1fr; /* 1 column on extra small screens */
+    grid-template-columns: 1fr; 
   }
 }
 footer {
@@ -348,7 +348,7 @@ footer {
     padding: 7px;
   }
   .details {
-    display: none; /* Hide by default */
+    display: none; 
     margin-top: 10px;
     padding: 10px;
     background-color: #f4f4f4;
@@ -365,7 +365,7 @@ footer {
     margin: 10px 0 0;
     font-size: 16px;
     .details {
-      display: none; /* Hide by default */
+      display: none; 
       margin-top: 10px;
       padding: 10px;
       background-color: #f4f4f4;
