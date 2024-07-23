@@ -220,9 +220,12 @@ main {
   height: auto; 
   max-height: 150px; 
   object-fit: contain; 
-  border-radius: 10px; 
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
 }
-
+.tim-card img:active {
+  transform: scale(1.1);
+}
 }
 
 .tim-card button {
