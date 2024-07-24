@@ -61,16 +61,37 @@
       </div>
       <div class="comment-section">
         <h3>Comments</h3>
-        <form class="comment-form">
-          <textarea placeholder="comment disini" required></textarea>
+        <form class="comment-form" id="commentForm">
+          <textarea id="commentInput" placeholder="comment disini" required></textarea>
           <button type="submit">Submit</button>
         </form>
-        <ul class="comment-list">
+        <ul class="comment-list" id="commentList">
           <!-- Daftar komentar akan muncul di sini -->
-        </ul>
-      </div>
+        </ul>
+      </div>
   </div>
   <div>
+    <script>
+      document.getElementById('commentForm').addEventListener('submit', function (e) {
+        e.preventDefault(); 
+  
+        
+        var commentInput = document.getElementById('commentInput');
+        var commentText = commentInput.value;
+  
+        if (commentText.trim() !== "") { 
+          var newComment = document.createElement('li');
+          newComment.textContent = commentText;
+  
+          
+          var commentList = document.getElementById('commentList');
+          commentList.appendChild(newComment);
+  
+          
+          commentInput.value = '';
+        }
+      });
+    </script>
 
     <a href="" class="read-more"> Read More</a>
   </div>
