@@ -210,15 +210,17 @@ body {
 /* About */
 .about {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
   gap: 20px;
+  text-align: center; 
 }
 
 .about-image {
-  flex: 1 1 45%;
+  width: 100%;
   overflow: hidden;
+  max-width: 600px; 
 }
 
 .about-image img {
@@ -233,7 +235,9 @@ body {
 }
 
 .about-content {
-  flex: 1 1 45%;
+  flex: 1;
+  max-width: 800px;
+  padding: 20px;
 }
 
 .about-content h2 {
@@ -401,7 +405,7 @@ a:hover {
   padding: 20px;
   border-radius: 8px;
   margin: 20px auto;
-  width: 50%; /* Menggunakan 50% dari lebar halaman */
+  width: 80%; /* Menggunakan 50% dari lebar halaman */
   max-width: 1140px; /* Sesuaikan dengan lebar container jika diperlukan */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
